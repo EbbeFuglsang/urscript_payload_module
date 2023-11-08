@@ -1,0 +1,11 @@
+# Author: ebof
+# Function for applying a payload struct to the URController 
+# Comments are made in compliant with the https://marketplace.visualstudio.com/items?itemName=ahern.urscript VSCode plugin
+
+###
+# Set the target(active) payload for the UR controller
+# @param payload struct payload struct containing  mass[kg], cog(x,y,x)[m], inertia(Ixx, Iyy, Izz, Ixy, Ixz, Iyz)[kg*m^2]
+###
+def payload_set_target(payload):
+  set_target_payload(payload.mass, payload.cog, payload.inertia)
+end
